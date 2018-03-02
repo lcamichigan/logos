@@ -16,6 +16,8 @@ This is a collection of resources for creating logos for:
 
 * [GitHub](https://github.com/lcamichigan)
 
+* [Instagram](https://www.instagram.com/lambdachiumich/)
+
 * [LinkedIn](https://www.linkedin.com/groups/5072620)
   (https://www.linkedin.com/help/linkedin/answer/14/adding-or-editing-an-image-or-logo-to-your-group)
 

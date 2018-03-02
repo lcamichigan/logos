@@ -3,6 +3,7 @@ all : \
 	Facebook.png      \
 	favicon.ico       \
 	GitHub.png        \
+	Instagram.png     \
 	LinkedIn.png      \
 	MailChimp.png     \
 	Twitter.png       \
@@ -22,6 +23,9 @@ favicon.ico : favicon.asy
 
 GitHub.png : GitHub.asy
 	asy -outformat png -noView GitHub.asy
+
+Instagram.png : Instagram.asy
+	asy -outformat png -noView Instagram.asy
 
 LinkedIn.png : LinkedIn.asy
 	asy -outformat png -noView LinkedIn.asy

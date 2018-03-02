@@ -23,6 +23,7 @@ build_script:
     Eventbrite.png
     Facebook.png
     GitHub.png
+    Instagram.png
     LinkedIn.png
     Twitter.png
     WebsiteHeader.png
@@ -40,6 +41,7 @@ artifacts:
   - path: Facebook.png
   - path: favicon.ico
   - path: GitHub.png
+  - path: Instagram.png
   - path: LinkedIn.png
   - path: Twitter.png
   - path: WebsiteHeader.png
