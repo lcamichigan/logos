@@ -19,13 +19,13 @@ install:
 build_script:
   # Other Make executables are in C:\cygwin64\bin and C:\msys64\usr\bin.
   - set PATH=%PATH%;C:\cygwin\bin
+  # Skip MailChimp.png, which requires a commercial font.
   - C:\cygwin\bin\make
     Eventbrite.png
     Facebook.png
     favicon.ico
     GitHub.png
     LinkedIn.png
-    # Skip MailChimp.png, which requires a commercial font.
     Twitter.png
     WebsiteHeader.png
     Xero.png
