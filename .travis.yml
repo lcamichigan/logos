@@ -29,6 +29,7 @@ install:
     xcolor
     xetex
     xkeyval
+  - curl --location --remote-name https://github.com/lcamichigan/cross-and-crescent/releases/download/v1.4/cross-and-crescent.sty
 
 script:
   - make

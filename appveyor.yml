@@ -15,6 +15,7 @@ install:
   - set PATH=%PATH%;C:\texlive\bin\win32
   - tlmgr install asymptote
   - choco install imagemagick.tool
+  - ps: Start-FileDownload 'https://github.com/lcamichigan/cross-and-crescent/releases/download/v1.4/cross-and-crescent.sty'
 
 build_script:
   # Other Make executables are in C:\cygwin64\bin and C:\msys64\usr\bin.
