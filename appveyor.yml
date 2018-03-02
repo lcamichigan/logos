@@ -1,0 +1,45 @@
+# https://www.appveyor.com/docs/appveyor-yml
+
+install:
+  # Download and install a minimal TeX Live, based on
+  # https://github.com/latex3/latex3/blob/master/support/texlive.sh.
+  - ps: Start-FileDownload 'http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip'
+  - 7z x install-tl.zip
+  - cd install-tl-20*
+  # The install-tl-windows.bat script contains pause commands that stop
+  # execution until a key is pressed. Remove these.
+  - ps: Set-Content install-tl-windows.bat (Get-Content install-tl-windows.bat | Select-String -Pattern '^pause$' -NotMatch)
+  - ps: Set-Content texlive.profile "selected_scheme scheme-minimal`nTEXDIR C:\texlive`noption_doc 0`noption_src 0`n"
+  - install-tl-windows -no-gui -profile=texlive.profile
+  - cd ..
+  - set PATH=%PATH%;C:\texlive\bin\win32
+  - tlmgr install asymptote
+  - choco install imagemagick.tool
+
+build_script:
+  # Other Make executables are in C:\cygwin64\bin and C:\msys64\usr\bin.
+  - set PATH=%PATH%;C:\cygwin\bin
+  - C:\cygwin\bin\make
+    Eventbrite.png
+    Facebook.png
+    favicon.ico
+    GitHub.png
+    LinkedIn.png
+    # Skip MailChimp.png, which requires a commercial font.
+    Twitter.png
+    WebsiteHeader.png
+    Xero.png
+
+test: off
+
+artifacts:
+  - path: Eventbrite.png
+  - path: Facebook.png
+  - path: favicon.ico
+  - path: GitHub.png
+  - path: LinkedIn.png
+  - path: Twitter.png
+  - path: WebsiteHeader.png
+  - path: Xero.png
+
+skip_tags: true

@@ -1,0 +1,34 @@
+language: generic
+os: osx
+
+# https://docs.travis-ci.com/user/osx-ci-environment/#OS-X-Version
+matrix:
+  include:
+    - osx_image: xcode9.3beta # macOS High Sierra 10.13
+    - osx_image: xcode8.3 # macOS Sierra 10.12
+    - osx_image: xcode7.3 # OS X El Capitan 10.11
+    - osx_image: xcode6.4 # OS X Yosemite 10.10
+
+install:
+  # Download and install a minimal TeX Live, based on
+  # https://github.com/latex3/latex3/blob/master/support/texlive.sh.
+  - curl --location --remote-name http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  - tar -xf install-tl-unx.tar.gz
+  - cd install-tl-20*
+  - echo -e "selected_scheme scheme-minimal\nTEXDIR /usr/local/texlive\noption_doc 0\noption_src 0" > texlive.profile
+  - sudo ./install-tl -profile=texlive.profile
+  - cd ..
+  - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
+  # Asymptote requires Ghostscript.
+  - HOMEBREW_NO_AUTO_UPDATE=1 brew install ghostscript imagemagick
+  - sudo tlmgr install
+    asymptote
+    fontspec
+    oberdiek
+    standalone
+    xcolor
+    xetex
+    xkeyval
+
+script:
+  - make

@@ -1,5 +1,8 @@
 # Logos
 
+[![Build status](https://ci.appveyor.com/api/projects/status/aerc4t2hp737kxew?svg=true)](https://ci.appveyor.com/project/lcamichigan/logos)
+[![Build Status](https://travis-ci.org/lcamichigan/logos.svg?branch=master)](https://travis-ci.org/lcamichigan/logos)
+
 This is a collection of resources for creating logos for:
 
 * [Eventbrite](http://lcamichigan.eventbrite.com/)
