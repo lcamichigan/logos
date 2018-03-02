@@ -19,8 +19,6 @@ install:
 
 build_script:
   # Other Make executables are in C:\cygwin64\bin and C:\msys64\usr\bin.
-  - set PATH=%PATH%;C:\cygwin\bin
-  # Skip MailChimp.png, which requires a commercial font.
   - C:\cygwin\bin\make
     Eventbrite.png
     Facebook.png
@@ -33,6 +31,7 @@ build_script:
   # so don’t use the Makefile to create favicon.ico.
   - asy -outformat png -noView favicon.asy
   - C:\ProgramData\chocolatey\lib\imagemagick.tool\tools\convert favicon-16.png favicon-32.png favicon-64.png favicon-128.png favicon-256.png favicon.ico
+  # Skip MailChimp.png, which requires a commercial font.
 
 test: off
 
