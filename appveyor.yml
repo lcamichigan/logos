@@ -24,12 +24,15 @@ build_script:
   - C:\cygwin\bin\make
     Eventbrite.png
     Facebook.png
-    favicon.ico
     GitHub.png
     LinkedIn.png
     Twitter.png
     WebsiteHeader.png
     Xero.png
+  # ImageMagick’s convert.exe conflicts with C:\Windows\System32\convert.exe,
+  # so don’t use the Makefile to create favicon.ico.
+  - asy -outformat png -noView favicon.asy
+  - C:\ProgramData\chocolatey\lib\imagemagick.tool\tools\convert favicon-16.png favicon-32.png favicon-64.png favicon-128.png favicon-256.png favicon.ico
 
 test: off
 
@@ -44,6 +47,3 @@ artifacts:
   - path: Xero.png
 
 skip_tags: true
-
-on_finish:
-  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
