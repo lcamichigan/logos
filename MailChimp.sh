@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Create a PNG of a maize cross and crescent on a blue circle.
-asy -outformat png -command '
+asy -outformat png -noView -command '
 include crossAndCrescent;
 real size = 240; size(size);
 fill(circle((0, 0), 0.5 * size), cmyk(1, 0.6, 0, 0.6));
