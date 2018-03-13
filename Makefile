@@ -18,7 +18,7 @@ Facebook.png : Facebook.asy
 
 favicon.ico : favicon.asy
 	asy -outformat png -noView favicon.asy
-	convert favicon-16.png favicon-32.png favicon-64.png favicon-128.png favicon-256.png favicon.ico
+	magick convert favicon-16.png favicon-32.png favicon-64.png favicon-128.png favicon-256.png favicon.ico
 	rm -f favicon-*.png
 
 GitHub.png : GitHub.asy
