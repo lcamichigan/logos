@@ -22,11 +22,12 @@ install:
   - sudo tlmgr install
     asymptote
     fontspec
+    latex-bin
+    luaotfload
+    luatex85
     oberdiek
     standalone
     xcolor
-    xetex
-    xkeyval
   - curl --location --remote-name https://github.com/lcamichigan/cross-and-crescent/releases/download/v1.4/crossAndCrescent.asy
 
 script:

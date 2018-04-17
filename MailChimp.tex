@@ -1,3 +1,8 @@
+% See
+% https://tex.stackexchange.com/questions/315025/lualatex-texlive-2016-standalone-undefined-control-sequence
+% for why this is needed.
+\RequirePackage{luatex85}
+
 \documentclass{standalone}
 \usepackage[no-config]{fontspec}
 \usepackage{xcolor}

@@ -9,7 +9,7 @@ fill(scale(21) * crossAndCrescentPath(), cmyk(0, 0.18, 1, 0) + evenodd);
 ' .png
 
 # Create a PDF file of the header text.
-xetex -fmt=xelatex -interaction=batchmode MailChimp.tex
+lualatex MailChimp.tex
 
 # Rasterize the PDF file to a PNG file.
 convert -density 306 MailChimp.pdf MailChimp.png
