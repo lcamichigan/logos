@@ -5,14 +5,14 @@
 
 This is a collection of resources for creating logos for:
 
-* [Eventbrite](http://lcamichigan.eventbrite.com/)
+* [Eventbrite](https://lcamichigan.eventbrite.com/)
   (https://www.eventbrite.com/support/articles/en_US/How_To/how-to-set-up-your-organizer-profile-page#3)
 
 * [Facebook](https://www.facebook.com/lcasigmazeta)
   (https://www.facebook.com/help/125379114252045)
 
 * The [favicon](https://en.wikipedia.org/wiki/Favicon) and header of
-  http://lcamichigan.com
+  https://lcamichigan.com
 
 * [GitHub](https://github.com/lcamichigan)
 
