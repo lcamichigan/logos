@@ -12,7 +12,7 @@ install:
   - cd ..
   - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
   # Asymptote requires Ghostscript.
-  - HOMEBREW_NO_AUTO_UPDATE=1 brew install ghostscript imagemagick
+  - HOMEBREW_NO_AUTO_UPDATE=1 brew install imagemagick --with-ghostscript
   - sudo tlmgr install
     asymptote
     fontspec
