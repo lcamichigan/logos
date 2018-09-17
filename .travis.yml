@@ -13,10 +13,12 @@ install:
   - PATH=$PATH:/usr/local/texlive/bin/x86_64-darwin
   # Asymptote requires Ghostscript. Also, creating MailChimp.png requires
   # converting a PDF to a PNG using ImageMagick convert, which also relies on
-  # Ghostscript. Since https://github.com/Homebrew/homebrew-core/pull/31558,
-  # Homebrew’s ImageMagick doesn’t permit using Ghostscript (due to security
-  # vulnerabilities) unless the --with-ghostscript option is used.
-  - HOMEBREW_NO_AUTO_UPDATE=1 brew install imagemagick --with-ghostscript
+  # Ghostscript. After https://github.com/Homebrew/homebrew-core/pull/31558,
+  # Homebrew’s ImageMagick didn’t permit using Ghostscript (due to security
+  # vulnerabilities) unless the --with-ghostscript option of the imagemagick
+  # formula was used, but this was relaxed with
+  # https://github.com/Homebrew/homebrew-core/commit/16e1df6dc2657cae75996c15051139ed9a335ff6
+  - HOMEBREW_NO_AUTO_UPDATE=1 brew install ghostscript imagemagick
   - sudo tlmgr install
     asymptote
     fontspec
