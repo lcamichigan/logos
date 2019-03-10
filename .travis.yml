@@ -29,7 +29,7 @@ install:
     standalone
     xcolor
     xkeyval
-  - curl --location --remote-name https://github.com/lcamichigan/cross-and-crescent/releases/download/v1.4/crossAndCrescent.asy
+  - curl --location --remote-name https://github.com/lcamichigan/cross-and-crescent/releases/download/v1.5/crossAndCrescent.asy
 
 script:
   - make
