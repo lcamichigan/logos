@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Create a PNG of a maize cross and crescent on a blue circle.
 asy -outformat png -noView -command '
